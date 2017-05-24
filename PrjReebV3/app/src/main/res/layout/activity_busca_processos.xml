@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcd80b"
+
+    tools:context="andre.prjreebv3.BuscaProcessos">
+
+
+    <ImageView
+        android:id="@+id/tela12"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:background="#fcd80b"
+        android:src="@drawable/tela12" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR PROCESSOS"
+        android:textAlignment="center"
+        android:textColor="#3CB371"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <Button
+        android:id="@+id/btnData"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@drawable/degrade10"
+        android:elevation="0dp"
+        android:text="Data"
+        android:textColor="@android:color/white"
+        android:layout_weight="0.01"
+        />
+
+
+    <Button
+        android:id="@+id/btnLote"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:background="@drawable/degrade10"
+        android:layout_weight="0.01"
+        android:text="Lote"
+        android:textColor="@android:color/white"
+        />
+
+
+    <Button
+        android:id="@+id/btnTipo"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.01"
+        android:background="@drawable/degrade10"
+        android:textColor="@android:color/white"
+        android:text="Tipo"
+        />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.01"
+        android:background="@drawable/degrade10"
+        android:textColor="@android:color/white"
+        android:text="Voltar"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

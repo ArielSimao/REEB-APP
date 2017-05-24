@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcd80b"
+
+    tools:context="andre.prjreebv3.BuscaProcessosLote"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/tela12"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:background="#fcd80b"
+        android:src="@drawable/tela12"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR PROCESSOS LOTE"
+        android:textAlignment="center"
+        android:textColor="#3CB371"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:typeface="serif" />
+
+    <ListView
+        android:id="@+id/ListViewLote"
+        android:layout_width="wrap_content"
+        android:layout_height="292dp"
+        android:layout_weight="1.35" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:background="@drawable/degrade10"
+        android:textColor="@android:color/white"
+        android:text="Voltar"
+        android:layout_weight="0.03" />
+
+
+
+
+
+</LinearLayout>

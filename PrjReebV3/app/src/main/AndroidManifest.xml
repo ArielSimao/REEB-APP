@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="andre.prjreebv3">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/lupulo5"
+        android:label="REEB_V3"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Receita"
+            android:screenOrientation="portrait" />
+
+        <intent-filter>
+            <action android:name="android.intent.action.Receita" />
+        </intent-filter>
+
+        <activity
+            android:name=".Dados"
+            android:screenOrientation="portrait" />
+        <activity android:name=".BuscaReceitas" />
+        <activity android:name=".BuscaReceitasData" />
+        <activity android:name=".BuscaReceitasTipo" />
+        <activity android:name=".BuscaReceitasLote" />
+        <activity android:name=".Processos" />
+        <activity android:name=".BuscaProcessosData" />
+        <activity android:name=".BuscaProcessosTipo" />
+        <activity android:name=".BuscaProcessosLote" />
+        <activity android:name=".BuscaProcessos"></activity>
+    </application>
+
+</manifest>
