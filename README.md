@@ -1,2 +1,2 @@
 # REEB-APP
-Desenvolvimento do Software REEB no Android Studio
+Desenvolvimento do Aplicativo Android REEB
