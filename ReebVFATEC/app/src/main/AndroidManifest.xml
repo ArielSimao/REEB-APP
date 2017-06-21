@@ -35,7 +35,8 @@
                 <action android:name="android.intent.action.Calculo" />
             </intent-filter>
         </activity>
-        <activity android:name=".Dados"></activity>
+        <activity android:name=".Dados" />
+        <activity android:name=".BuscaReceita"></activity>
     </application>
 
 </manifest>

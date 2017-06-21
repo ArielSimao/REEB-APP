@@ -70,6 +70,9 @@ public class DAOIngrediente {
     {
         List<BeanIngrediente> itens = new ArrayList<BeanIngrediente>();
         Cursor cursor = banco.query(TABELA_INGREDIENTE,
+                //inserir order by de acordo com o tipo que busca que desseja
+                // data lote tipo
+
                 todasAsColunas, null, null, null, null, null);
         cursor.moveToFirst();
         while(!cursor.isAfterLast())

@@ -22,6 +22,7 @@ public class Calculo extends Activity {
     public TextView tipoSpinner2;//variavel Tipo de cerveja escolhido
 
 
+
     public Button btnSalvar;
 
 
@@ -65,7 +66,7 @@ public class Calculo extends Activity {
     private TextView edtPorcentagem9;
 
 
-
+    private Button btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -165,7 +166,7 @@ public class Calculo extends Activity {
             //PARAMOS AQUI
             //PARAMOS AQUI
             //PARAMOS AQUI
-
+            /*
             btnSalvar.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -189,7 +190,7 @@ public class Calculo extends Activity {
                     di.insere(rec,ing);
                 }
             });
-
+*/
 
             somaTotal.setText(String.valueOf(total));
 
@@ -291,7 +292,19 @@ public class Calculo extends Activity {
 
 
 
+        btnVoltar = (Button) findViewById(R.id.btnVoltar);  //Temos que trazer as views que fazem o movimento, no caso os botões
 
+
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {// depois do new clicamos ctrl space e ele mostra as opções
+            @Override
+            public void onClick(View view) {
+                Intent it = new Intent(getBaseContext(), MainActivity.class);//volta para a tela Menu
+                startActivity(it);
+
+
+            }
+        });
 
 
 

@@ -45,7 +45,13 @@ public class MainActivity extends Activity {
         });
 
         */
-
+        btnDados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {//declarando o metodo onClick
+                Intent it = new Intent(getBaseContext(), BuscaReceita.class);
+                startActivity(it);
+            }
+        });
 
         btnSair.setOnClickListener(new View.OnClickListener() {
 
