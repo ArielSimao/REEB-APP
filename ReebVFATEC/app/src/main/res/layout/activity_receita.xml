@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcd80b"
+    tools:context="andre.reebvfatec.Receita"
+    android:weightSum="1">
+
+    <ImageView
+        android:id="@+id/tela11"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="#fcd80b"
+        android:src="@drawable/tela11"
+        />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RECEITAS"
+        android:textAlignment="center"
+        android:textColor="#3CB371"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0.19">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <Button
+                android:id="@+id/btnData"
+                android:layout_width="62dp"
+                android:layout_height="wrap_content"
+                android:background="#fcd80b"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:onClick="Data"
+                android:text="Data:"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHighlight="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColorLink="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/txtData"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.08"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/txtLote"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:text="Lote:"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextViewEdits" />
+
+            <EditText
+                android:id="@+id/edtLote"
+                android:layout_width="70dp"
+                android:background="#fcd80b"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.15"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textSize="20sp"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txtTipo"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:gravity="center_vertical"
+                android:inputType="textPersonName"
+                android:text="Tipo de Cerveja:"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spTipo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="#fcd80b"
+                android:layout_weight="0.45"
+
+
+                android:entries="@array/estilos" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="367dp"
+        android:layout_height="34dp"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_weight="0.22">
+
+        <TextView
+            android:id="@+id/txtIngred"
+            android:layout_width="175dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Ingredientes"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtQuant"
+            android:layout_width="135dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="Quantidade (Kg)"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/edtIngred1"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd1"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/edtIngred2"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd2"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred3"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd3"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred4"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd4"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred5"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd5"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred6"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd6"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred7"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd7"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edtIngred8"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd8"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.27"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/edtIngred9"
+                    android:layout_width="175dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtQtd9"
+                    android:layout_width="130dp"
+                    android:layout_height="wrap_content"
+                    android:background="#fcd80b"
+                    android:ems="10"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/llbtn"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCalc"
+            android:layout_width="125dp"
+            android:layout_height="76dp"
+            android:layout_weight="1"
+            android:background="@drawable/degrade10"
+            android:onClick="btnCalc"
+            android:text="Calcular"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="125dp"
+            android:layout_height="76dp"
+            android:layout_weight="1"
+            android:background="@drawable/degrade10"
+            android:text="Voltar"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
