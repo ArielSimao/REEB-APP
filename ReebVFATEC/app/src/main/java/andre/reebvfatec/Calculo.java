@@ -10,6 +10,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import andre.reebvfatec.banco.DAOIngrediente;
+import andre.reebvfatec.banco.DAOReceita;
+import andre.reebvfatec.pojo.BeanIngrediente;
+import andre.reebvfatec.pojo.BeanReceita;
+
 public class Calculo extends Activity {
 
     public TextView edtLote;
@@ -120,18 +125,11 @@ public class Calculo extends Activity {
 
 
 
-        btnSalvar.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
 
 
 
         Intent it= getIntent();
-        Bundle parametros = it.getExtras();
+        final Bundle parametros = it.getExtras();
 
         if(parametros !=null) {
 
@@ -160,6 +158,37 @@ public class Calculo extends Activity {
             double porcentagem7 = ((Valor7 * 100)/total);
             double porcentagem8 = ((Valor8 * 100)/total);
             double porcentagem9 = ((Valor9 * 100)/total);
+
+
+            //PARAMOS AQUI
+            //PARAMOS AQUI
+            //PARAMOS AQUI
+            //PARAMOS AQUI
+            //PARAMOS AQUI
+
+            btnSalvar.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    BeanReceita rec = new BeanReceita();
+                    rec.setData(parametros.getString("edtData2"));
+                    rec.setLote(parametros.getString("edtLote"));
+                    rec.setTipo(parametros.getString("tipo"));
+
+
+
+                    DAOReceita dr;
+                    DAOIngrediente di;
+
+                    rec = dr.insert(rec);
+
+                    BeanIngrediente ing = new BeanIngrediente();
+                    ing.setIdReceita(rec.getId());
+
+
+                    di.insere(rec,ing);
+                }
+            });
 
 
             somaTotal.setText(String.valueOf(total));

@@ -5,10 +5,10 @@ import android.app.ListActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import andre.reebvfatec.pojo.BeanReceita;
+
 public class Dados extends Activity {
 
-    private ListView lstDados;
-    private List<BeanDados>listDados = null;
 
 
 

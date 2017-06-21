@@ -20,13 +20,14 @@ public class DAOReceita {
     private GerenciaBanco gerenciaBanco;
 
     // Colunas
+    public static final String ID = "id";
     public static final String DATA = "data";
     public static final String LOTE = "lote";
     public static final String TIPO = "tipo";
 
     public static final String[] todasAsColunas =
             {
-                    DATA, LOTE, TIPO
+                    ID, DATA, LOTE, TIPO
             };
 
     // Tabela
@@ -47,15 +48,20 @@ public class DAOReceita {
         gerenciaBanco.close();
     }
 
-    public void insert(BeanReceita item)
+    public BeanReceita insert(BeanReceita item)
     {
         ContentValues valores = new ContentValues();
         valores.put(DATA, item.getData());
         valores.put(LOTE, item.getLote());
         valores.put(TIPO, item.getTipo());
 
+        long vr = banco.insert(TABELA_RECEITA, null, valores);
 
-        banco.insert(TABELA_RECEITA, null, valores);
+        Cursor c = banco.query(TABELA_RECEITA, todasAsColunas, "ROWID = " + vr, null,null,null,null);
+        BeanReceita rec = cursorToItem(c);
+        c.close();
+
+        return rec;
     }
 
     public void update(BeanReceita item)
@@ -66,7 +72,7 @@ public class DAOReceita {
         valores.put(LOTE, item.getLote());
         valores.put(TIPO, item.getTipo());
 
-        banco.update(TABELA_RECEITA, valores, DATA + " = " + item.getData(), null);
+        banco.update(TABELA_RECEITA, valores, ID + " = " + item.getId(), null );
     }
 
 
@@ -86,24 +92,34 @@ public class DAOReceita {
         return itens;
     }
 
-    public BeanReceita selectUm(BeanReceita item)
+    public List<BeanReceita> selectTodosPorData(String data)
     {
+        List<BeanReceita> itens = new ArrayList<BeanReceita>();
         Cursor cursor = banco.query(
                 TABELA_RECEITA,
                 todasAsColunas,
-                DATA + " = " + item.getData(),
-                null, null, null, null);
+                DATA + " = ?",
+                new String[] {data},
+                null, null, null);
         cursor.moveToFirst();
-        return cursorToItem(cursor);
+        while(!cursor.isAfterLast())
+        {
+            BeanReceita item = cursorToItem(cursor);
+            itens.add(item);
+            cursor.moveToNext();
+        }
+        cursor.close();
+        return itens;
     }
 
     private BeanReceita cursorToItem(Cursor cursor)
     {
         BeanReceita item = new BeanReceita();
 
-        item.setData(cursor.getString(0));
-        item.setLote(cursor.getString(1));
-        item.setTipo(cursor.getString(2));
+        item.setId(cursor.getInt(0));
+        item.setData(cursor.getString(1));
+        item.setLote(cursor.getString(2));
+        item.setTipo(cursor.getString(3));
 
         return item;
     }

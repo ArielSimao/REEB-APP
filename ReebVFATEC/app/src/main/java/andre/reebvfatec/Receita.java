@@ -177,8 +177,6 @@ public class Receita extends Activity implements View.OnClickListener {
                 parametros.putString("edtIngred9",edtIngred9.getText().toString());
 
 
-
-
                 parametros.putString("edtQtd",edtQtd.getText().toString());
 
                 parametros.putString("edtQtd1",edtQtd1.getText().toString());

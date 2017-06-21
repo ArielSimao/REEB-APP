@@ -16,15 +16,17 @@ public class GerenciaBanco extends SQLiteOpenHelper {
     // tabelas
     private static final String TB_RECEITA =
             "CREATE TABLE receita ( " +
-                    "date  TEXT" +
-                    "lote  TEXT PRIMARY KEY, " +
-                    "tipo TEXT " +
+                    "id  INT PRIMARY KEY AUTOINCREMENT," +
+                    "date  TEXT, " +
+                    "lote  TEXT, " +
+                    "tipo TEXT, " +
                     ");";
     private static final String TB_INGREDIENTE =
             "CREATE TABLE ingrediente ( " +
-                    "nome TEXT PRIMARY KEY, " +
-                    "qtd TEXT, " +
-                    "porcentagem TEXT, " +
+                    "nome TEXT , " +
+                    "qtd REAL, " +
+                    "porcentagem REAL, " +
+                    "id_rec INT FOREIGN KEY REFERENCES receita(id)" +
                     ");";
 
 
