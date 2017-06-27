@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recebedata"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcd80b"
+
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="andre.reebvfatecfinal.RecebeData">
+
+
+    <ImageView
+        android:id="@+id/tela11"
+        android:layout_width="match_parent"
+        android:layout_height="148dp"
+        android:background="#fcd80b"
+        android:src="@drawable/tela11" />
+
+
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DATAS"
+        android:textAlignment="center"
+        android:textColor="#3CB371"
+        android:textSize="40sp"
+        android:textStyle="bold"
+
+        android:typeface="serif" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_green_dark" />
+
+
+    <ListView
+        android:id="@+id/lstData"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_weight="0.89" />
+
+    <Button
+        android:id="@+id/act_recebedata_btn_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_weight="0.05"
+        android:background="@drawable/degrade10"
+        android:text="Voltar"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fcd80b"
+    tools:context="andre.reebvfatecfinal.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/tela8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.18"
+        android:src="@drawable/tela8"
+
+        />
+
+    <Button
+        android:id="@+id/btnRec"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.11"
+        android:background="@drawable/degrade10"
+        android:elevation="0dp"
+        android:text="Receitas"
+        android:textColor="@android:color/white" />
+
+
+    <Button
+        android:id="@+id/btnDados"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.11"
+        android:background="@drawable/degrade10"
+        android:text="Dados"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnSair"
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0.11"
+        android:background="@drawable/degrade10"
+        android:text="Sair"
+        android:textColor="@android:color/white"
+
+        />
+
+
+
+
+
+
+</LinearLayout>

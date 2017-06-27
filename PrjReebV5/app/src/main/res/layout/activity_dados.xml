@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fcd80b"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="andre.reebvfatecfinal.Dados">
+
+
+    <ImageView
+        android:id="@+id/tela12"
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        android:layout_weight="0.05"
+        android:background="#fcd80b"
+        android:src="@drawable/tela12"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#3CB371"
+        android:textSize="40dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:text="DADOS" />
+
+
+    <ListView
+        android:id="@+id/lstDados"
+        android:layout_width="wrap_content"
+        android:layout_height="245dp"
+        android:layout_weight="0.21" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_weight="0.05"
+        android:background="@drawable/degrade10"
+        android:text="Voltar"
+        android:textColor="@android:color/white" />
+
+
+</LinearLayout>

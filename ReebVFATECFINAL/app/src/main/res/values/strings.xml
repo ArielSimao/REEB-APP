@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">ReebVFATEC</string>
+
+    <string name="btnRec" />
+
+    <string name="tipoSpinner1">Escolha um tipo</string>
+    <string name="titulo_tipo">TIPO</string>
+    <string name="titulo_lote">LOTES</string>
+    <string name="titulo_data">DATAS</string>
+
+    <string-array name="estilos">
+        <item>------------</item>
+        <item>Lager(Pilsner)</item>
+        <item>Lager(Dortmunder)</item>
+        <item>Lager(Munich)</item>
+        <item>Lager(Steam Beer)</item>
+        <item>Weissbier(Weizenbier)</item>
+        <item>Weissbier(Witbier)</item>
+        <item>Weissbier(Wheat)</item>
+        <item>Weissbier(Dunkel)</item>
+        <item>Marzen</item>
+        <item>Hell</item>
+        <item>Bock</item>
+        <item>Porter</item>
+        <item>Stout(Irish)</item>
+        <item>Stout(Russian Imperial)</item>
+        <item>Stout(Oatmeal)</item>
+        <item>Stout(Sweet)</item>
+        <item>Stout(American)</item>
+        <item>Stout(Dry)</item>
+        <item>ALE</item>
+        <item>IPA</item>
+        <item>IPA(American)</item>
+        <item>IPA(English)</item>
+        <item>IPA(Imperial)</item>
+        <item>IPA(Black)</item>
+        <item>IPA(Session)</item>
+        <item>Lambic</item>
+        <item>Ice</item>
+        <item>Faro</item>
+
+    </string-array>
+
+
+</resources>
